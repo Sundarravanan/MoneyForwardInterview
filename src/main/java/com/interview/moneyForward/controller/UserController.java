@@ -43,8 +43,7 @@ public class UserController {
         }
 
         if (!USER_ID_PATTERN.matcher(userId).matches()
-                || !PASSWORD_PATTERN.matcher(password).matches()
-                || userId.startsWith("Test")) {
+                || !PASSWORD_PATTERN.matcher(password).matches()) {
             return bad("Account creation failed", "invalid user_id or password");
         }
 
